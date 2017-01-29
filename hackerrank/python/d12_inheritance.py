@@ -22,17 +22,17 @@ class Student(Person):
         
         scores_amount = sum(self.score)/len(self.score)
         
-        if scores_amount in range(0,39): 
+        if 0 < scores_amount < 40: 
             return("T")
-        elif scores_amount in range(41,54): 
+        elif 40 <= scores_amount < 50: 
             return("D")
-        elif scores_amount in range(55,69): 
+        elif 55 <= scores_amount < 70: 
             return("P")
-        elif scores_amount in range(70,79): 
+        elif 70 <= scores_amount < 80: 
             return("A")
-        elif scores_amount in range(80,89): 
+        elif 80 <= scores_amount < 90: 
             return("E")
-        elif scores_amount in range(90,100): 
+        elif 90 <= scores_amount <= 100: 
             return("O")
 
 line = input().split()
