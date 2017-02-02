@@ -1,9 +1,5 @@
-
-num = input().strip()
-
 try:
-    int_num = int(num)
-    print(int_num)
+    print(int(input().strip()))
 except:
     print("Bad String")
 
