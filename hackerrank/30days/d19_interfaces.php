@@ -3,13 +3,14 @@ interface AdvancedArithmetic{
             public function divisorSum($n);
         }
 
-Class Calculator {
+Class Calculator implements AdvancedArithmetic{
 
-        function divisorSum($number) {
+        function divisorSum($n) {
                 $sum = 0;
-                for ($i = 1; i <=$n; $i++) {
-                        if ($number % 2 == 0)
-                                $sum += $i;
+                for ($i=1; $i<=$n; $i++) {
+                        if ($n % $i == 0) {
+                                $sum+=$i;
+                                }
                         }        
                 return $sum;
                 }
