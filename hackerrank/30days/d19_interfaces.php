@@ -3,14 +3,17 @@ interface AdvancedArithmetic{
             public function divisorSum($n);
         }
 
-public function divisorSum($number) {
-        int $sum = 0
-        for ($i = 1; i <=$n; $i++ {
-                if $number % 2
-                }        
-        
-        }
+Class Calculator {
 
+        function divisorSum($number) {
+                $sum = 0;
+                for ($i = 1; i <=$n; $i++) {
+                        if ($number % 2 == 0)
+                                $sum += $i;
+                        }        
+                return $sum;
+                }
+}
 
 
 $n=intval(fgets(STDIN));
