@@ -2,6 +2,7 @@ class Node:
     def __init__(self,data):
         self.right=self.left=None
         self.data = data
+
 class Solution:
     def insert(self,root,data):
         if root==None:
@@ -15,9 +16,12 @@ class Solution:
                 root.right=cur
         return root
 
-        def getHeight(self,root):
-        #Write your code here
-            pass
+    def getHeight(self,root):
+        if root is not None:
+            #print(self.getHeight(root.right),self.getHeight(root.right),max(self.getHeight(root.right),self.getHeight(root.left)) + 1)
+            return max(self.getHeight(root.right),self.getHeight(root.left)) + 1
+        else:
+            return -1
 
 T=int(input())
 myTree=Solution()
@@ -25,6 +29,5 @@ root=None
 for i in range(T):
     data=int(input())
     root=myTree.insert(root,data)
-#height=myTree.getHeight(root)
-#print(height)
-print(myTree())
+height=myTree.getHeight(root)
+print(height)
