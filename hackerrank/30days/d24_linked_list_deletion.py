@@ -23,13 +23,15 @@ class Solution:
 
     def removeDuplicates(self,head):
         #Write your code here
-  
-  
-  
-  
-  
-  
-  
+         if head.next is None:
+            return head
+      
+        if head.data is head.next.data:
+            return self.removeDuplicates(head.next)
+        
+        head.next = self.removeDuplicates(head.next)
+        
+
 mylist= Solution()
 T=int(input())
 head=None
