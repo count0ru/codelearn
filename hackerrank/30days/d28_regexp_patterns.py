@@ -11,4 +11,3 @@ for a0 in range(N):
 
 for w in sorted(database):
       print(w)
-
